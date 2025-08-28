@@ -20,34 +20,14 @@ export const Footer: React.FC<FooterProps> = ({ activeTab, setActiveTab, showWal
         <span className="text-xs mt-1">Home</span>
       </button>
       <button
-        onClick={() => setActiveTab(Tab.Actions)}
+        onClick={() => setActiveTab(Tab.Chat)}
         className={`flex flex-col items-center justify-center w-full h-full ${
-          activeTab === Tab.Actions ? 'text-primary dark:text-primary-light' : 'text-gray-500 dark:text-gray-400'
+          activeTab === Tab.Chat ? 'text-primary dark:text-primary-light' : 'text-gray-500 dark:text-gray-400'
         }`}
       >
-        <span className="text-xl">⚡</span>
-        <span className="text-xs mt-1">Actions</span>
+        <span className="text-xl">💬</span>
+        <span className="text-xs mt-1">Chat</span>
       </button>
-      <button
-        onClick={() => setActiveTab(Tab.Context)}
-        className={`flex flex-col items-center justify-center w-full h-full ${
-          activeTab === Tab.Context ? 'text-primary dark:text-primary-light' : 'text-gray-500 dark:text-gray-400'
-        }`}
-      >
-        <span className="text-xl">📋</span>
-        <span className="text-xs mt-1">Context</span>
-      </button>
-      {showWallet && (
-        <button
-          onClick={() => setActiveTab(Tab.Wallet)}
-          className={`flex flex-col items-center justify-center w-full h-full ${
-            activeTab === Tab.Wallet ? 'text-primary dark:text-primary-light' : 'text-gray-500 dark:text-gray-400'
-          }`}
-        >
-          <span className="text-xl">👛</span>
-          <span className="text-xs mt-1">Wallet</span>
-        </button>
-      )}
     </div>
   </div>
 );
